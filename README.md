@@ -1,4 +1,4 @@
-# barcode
+# barcode [![Build Status](https://travis-ci.org/ondrs/barcode.svg?branch=master)](https://travis-ci.org/ondrs/barcode)
 
 Dead simple barcode generator for clojure based on Java barbecue library.
 
