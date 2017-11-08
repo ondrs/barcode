@@ -5,11 +5,11 @@ Dead simple barcode generator for clojure based on Java barbecue library.
 ## Usage
 
 ```clojure
-(def barcode (generate :code128 "010123456789012815051231")) ;; creates a Barcode instance
+(def barcode (generate :code128 "010123456789012815051231")) ;; create a Barcode instance
 
-(write! "ean-128.png") ;; and writes it into the file
+(write! barcode "ean-128.png") ;; and write it into the file
 
-(write! an-output-stream :png) ;; or you can use an instance of OutputStream directly 
+(write! barcode an-output-stream :png) ;; or you can use an instance of OutputStream 
 ```
 
 That's it!
