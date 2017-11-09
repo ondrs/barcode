@@ -41,8 +41,8 @@
       (-> ext last string/lower-case))))
 
 
-(defn- ^Boolean write-wrapper!
-  "General wrapper around ImageIO/write"
+(defn- ^Boolean writer!-impl
+  "General wrapper implementation around ImageIO/write"
   [^Barcode barcode ^String format output]
   (if-not (ImageIO/write (BarcodeImageHandler/getImage barcode)
                          format
@@ -57,13 +57,13 @@
    (let [file (if-not
                 (instance? File output-file)
                 (io/file output-file))]
-     (write-wrapper! barcode
-                     (image-format (.getName file))
-                     file)))
+     (writer!-impl barcode
+                   (image-format (.getName file))
+                   file)))
   ([^Barcode barcode ^OutputStream output-stream format]
-   (write-wrapper! barcode
-                   (condp = format
+   (writer!-impl barcode
+                 (condp = format
                      :jpg "jpg"
                      :gif "gif"
                      :png "png")
-                   output-stream)))
+                 output-stream)))
