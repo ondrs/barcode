@@ -1,6 +1,13 @@
 # barcode [![Build Status](https://travis-ci.org/ondrs/barcode.svg?branch=master)](https://travis-ci.org/ondrs/barcode) [![Clojars Project](https://img.shields.io/clojars/v/ondrs/barcode.svg)](https://clojars.org/ondrs/barcode)
 
-Dead simple barcode generator for clojure based on Java barbecue library.
+Dead simple barcode generator for Clojure based on Java barbecue library.
+
+## Installation
+Add the following dependency to your `project.clj` file:
+
+```clojure
+[ondrs/barcode "0.1.0"]
+```
 
 ## Usage
 
